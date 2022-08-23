@@ -22,7 +22,7 @@ public class exercicio3 {
 
         }else{
             double pesoIdealFeminino = 62.1*altura-44.7;
-            System.out.printf("O peso ideal para sua altura é:%.1f", pesoIdealFeminino);
+            System.out.printf("O peso ideal para sua altura é:%.1f", pesoIdealFeminino); 
         }
 
         
