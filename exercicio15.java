@@ -57,6 +57,8 @@ public class exercicio15 {
             System.out.printf("O maior número é: %.1f", maior);
         }
 
+        input.close();
+
     }
 
 }
