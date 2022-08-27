@@ -13,24 +13,50 @@ public class exercicio15 {
         // (c) Se opcao for 3, o maior deve ser escrito entre os demais
 
         System.out.println("Informe o primeiro número: ");
-        double n1 = input.nextDouble();
+        double v1 = input.nextDouble();
         System.out.println("Informe o segundo número: ");
-        double n2 = input.nextDouble();
+        double v2 = input.nextDouble();
         System.out.println("Informe o terceiro número: ");
-        double n3 = input.nextDouble();
+        double v3 = input.nextDouble();
 
         System.out.println(
-                "Selecione uma opção: [1] O programa deve escrever os valores em ordem crescente.\n[2]O programa deve escrever os valores em ordem decrescente.\n[3]o maior deve ser escrito entre os demais.");
+                "Selecione uma opção: \n[1] O programa deve escrever os valores em ordem crescente.\n[2]O programa deve escrever os valores em ordem decrescente.\n[3]o maior deve ser escrito entre os demais.");
         int opcao = input.nextInt();
 
         if (opcao < 1 || opcao > 3) {
             System.out.println("Informe uma opção válida");
         }
-    
-    
-            
-            
+
+        double maior, meio, menor;
+
+        maior = v1;
+        if (v2 > maior)
+            maior = v2;
+        if (v3 > maior)
+            maior = v3;
+
+        menor = v1;
+        if (v2 < menor)
+            menor = v2;
+        if (v3 < menor)
+            menor = v3;
+
+        meio = v1;
+        if (menor == v1 && maior == v3)
+            meio = v2;
+        if (menor == v1 && maior == v2)
+            meio = v3;
+
+        if (opcao == 1) {
+            System.out.printf("Ordem crescente: %.1f %.1f %.1f", menor, meio, maior);
+        }
+        if (opcao == 2) {
+            System.out.printf("Ordem decrescente: %.1f %.1f %.1f", maior, meio, menor);
+        }
+        if (opcao == 3) {
+            System.out.printf("O maior número é: %.1f", maior);
         }
 
     }
 
+}
