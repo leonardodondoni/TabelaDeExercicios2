@@ -30,15 +30,18 @@ public class exercicio11 {
             System.out.println("Informe um horário final do jogo válido em minutos");
         }
 
-        int totalInicio = inicioHoras * 60 + inicioMinutos;
-        int totalFim = fimHoras * 60 + fimMinutos;
-        int duracaoTotal = Math.abs(totalInicio - totalFim);
+        inicioMinutos = inicioHoras * 60 + inicioMinutos;
+        fimMinutos = fimHoras * 60 + fimMinutos;
+        int duracaoTotal;
 
-        int duracaoTotalHoras = duracaoTotal / 60;
-        int duracaoTotalMinutos = duracaoTotal % 60;
+        if (inicioMinutos < fimMinutos)
+            duracaoTotal = fimMinutos - inicioMinutos;
+        else {
+            duracaoTotal = 24 * 60 - inicioMinutos + fimMinutos;
+            System.out.println(duracaoTotal / 60 + " hora(s) " + duracaoTotal % 60 + " minuto(s)");
+        }
 
-        System.out.printf("Duração total do jogo: %d horas e %d minutos", duracaoTotalHoras, duracaoTotalMinutos);
-
+        input.close();
     }
 
 }
