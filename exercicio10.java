@@ -36,6 +36,8 @@ public class exercicio10 {
             System.out.println("Sua nota conceito é: F");
         }
 
+        teclado.close();
+
     }
 
 }

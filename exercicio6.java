@@ -28,6 +28,8 @@ public class exercicio6 {
             System.out.printf("Seu limite é de: R$ %.1f", limite);
         }
 
+        teclado.close();
+
     }
 
 }

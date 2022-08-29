@@ -25,6 +25,8 @@ public class exercicio3 {
             System.out.printf("O peso ideal para sua altura é:%.1f", pesoIdealFeminino); 
         }
 
+        teclado.close();
+
         
 
         
