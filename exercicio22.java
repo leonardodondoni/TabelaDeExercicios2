@@ -78,6 +78,8 @@ public class exercicio22 {
                 
             }
         }
+
+        teclado.close();
           
 
 

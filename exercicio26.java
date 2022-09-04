@@ -40,6 +40,7 @@ public class exercicio26 {
 
         }
 
+        input.close();
 
 
 

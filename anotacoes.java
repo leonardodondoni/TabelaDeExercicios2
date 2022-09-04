@@ -65,6 +65,9 @@ public class anotacoes {
 
         System.out.println("Nome1 em minusculo: " + tmp1);
         System.out.println("Nome2 em maiusculo: " + tmp2);
+
+        input.close();
     }
+    
 
 }
