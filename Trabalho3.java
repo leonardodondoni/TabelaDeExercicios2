@@ -15,10 +15,22 @@ public class Trabalho3 {
         for (count = 1; count <= quantidadeAlunosDesejados; count++) {
             System.out.printf("Aluno %d tem quantos anos?\n", count);
             idade = input.nextInt();
+            if (idade < 1 || idade > 120) {
+                System.out.println("Idade inválida");
+                return;
+            }
             System.out.printf("Aluno %d - está em quantos grupos?\n", count);
             quantidadeGrupos = input.nextInt();
+            if (quantidadeGrupos < 1) {
+                System.out.println("Quantidade de grupos inválida");
+                return;
+            }
             System.out.printf("Aluno %d - Qual o tempo diário de uso em minutos?\n", count);
             tempoDiárioMinutos = input.nextInt();
+            if (tempoDiárioMinutos < 1) {
+                System.out.println("Tempo de uso diário inválido");
+                return;
+            }
 
             somaIdade = somaIdade + idade;
 
@@ -43,8 +55,7 @@ public class Trabalho3 {
                 (somaIdade / Double.valueOf(quantidadeAlunosDesejados)));
 
         System.out.printf(
-                "Maior tempo (em hora e minuto) gasto no WhatsApp por um aluno para estudar: %d hora(s) e %d minutos.\n",
-                (maiorTempo / 60), (maiorTempo % 60));
+                "Maior tempo (em hora e minuto) gasto no WhatsApp por um aluno para estudar: %d hora(s) e %d minutos.\n", (maiorTempo / 60), (maiorTempo % 60));
 
         System.out.printf("Idade do aluno que participa de mais grupos: %d anos.", alunoQueParticipaDeMaisGrupos);
 
